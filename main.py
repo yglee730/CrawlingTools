@@ -1,20 +1,39 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QWidget
+from PyQt5 import uic
+from PyQt5.QtWidgets import QApplication, QMainWindow
 
-class MyApp(QWidget):
+from bs4 import BeautifulSoup
+import requests
 
+formClass = uic.loadUiType("./MainUI.ui")[0]
+
+class MyApp(QMainWindow,formClass):
     def __init__(self):
         super().__init__()
-        self.initUI()
+        self.setupUi(self)
 
-    def initUI(self):
-        self.setWindowTitle('Web Crawling')
-        self.move(300, 300)
-        self.resize(400, 200)
-        self.show()
+        self.crawlBtn.clicked.connect(self.crawlStart)
 
+    def crawlStart(self):
+        url = self.webSiteName.toPlainText()
+
+        for page in range(1,30):
+            response = requests.get(url+str(page), verify=False)
+            soup = BeautifulSoup(response.content, 'html.parser')
+
+            para1 = self.att1.toPlainText()
+            items = soup.find_all(para1)
+
+            self.crawlResult.appendPlainText("========="+str(page)+"==========")
+
+            for item in items:
+                para2 = self.att2.toPlainText()
+                res = item.find(para2).text
+                self.crawlResult.appendPlainText(res)
+                print(res)
 
 if __name__ == '__main__':
    app = QApplication(sys.argv)
-   ex = MyApp()
-   sys.exit(app.exec_())
+   myWindow = MyApp()
+   myWindow.show()
+   app.exec_()
