@@ -19,16 +19,15 @@ class MyApp(QMainWindow,formClass):
         response = requests.get(url, verify=False)
         soup = BeautifulSoup(response.content, 'html.parser')
 
-        response = requests.get(url, verify=False)
-        soup = BeautifulSoup(response.content, 'html.parser')
-
         tag1 = self.tag1.toPlainText()
         att1 = self.att1.toPlainText()
         value1 = self.value1.toPlainText()
 
-        st = "{},{{}:{}}".format(tag1, att1, value1)
-        items = soup.find_all(st)
-        print(items.text)
+        items = soup.find_all(tag1,{att1:value1})
+
+        for item in items:
+            print(item.text)
+            self.crawlResult.appendPlainText(item.text)
 
         # for item in items:
         #     para2 = self.att2.toPlainText()
