@@ -57,6 +57,13 @@
       <widget class="QPlainTextEdit" name="crawlResult"/>
      </item>
      <item>
+      <widget class="QPushButton" name="defaultBtn">
+       <property name="text">
+        <string>결과창 초기화</string>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QLabel" name="label_4">
        <property name="text">
         <string>저장 형태</string>
@@ -138,9 +145,9 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>310</y>
+      <y>320</y>
       <width>371</width>
-      <height>191</height>
+      <height>171</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_2">

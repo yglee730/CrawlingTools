@@ -13,6 +13,7 @@ class MyApp(QMainWindow,formClass):
         self.setupUi(self)
 
         self.crawlBtn.clicked.connect(self.crawlStart)
+        self.defaultBtn.clicked.connect(self.default)
 
     def crawlStart(self):
         url = self.webSiteName.toPlainText()
@@ -50,6 +51,9 @@ class MyApp(QMainWindow,formClass):
         #         res = item.find(para2).text
         #         self.crawlResult.appendPlainText(res)
         #         print(res)
+    def default(self):
+        self.crawlResult.clear()
+
 
 if __name__ == '__main__':
    app = QApplication(sys.argv)
