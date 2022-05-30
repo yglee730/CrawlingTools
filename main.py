@@ -30,27 +30,6 @@ class MyApp(QMainWindow,formClass):
             print(item.text)
             self.crawlResult.appendPlainText(item.text)
 
-        # for item in items:
-        #     para2 = self.att2.toPlainText()
-        #     res = item.find(para2).text
-        #     self.crawlResult.appendPlainText(res)
-        #     print(res)
-
-        # self.crawlResult.appendPlainText(items.text)
-        # for page in range(1,30):
-        #     response = requests.get(url+str(page), verify=False)
-        #     soup = BeautifulSoup(response.content, 'html.parser')
-        #
-        #     para1 = self.att1.toPlainText()
-        #     items = soup.find_all(para1)
-        #
-        #     self.crawlResult.appendPlainText("========="+str(page)+"==========")
-        #
-        #     for item in items:
-        #         para2 = self.att2.toPlainText()
-        #         res = item.find(para2).text
-        #         self.crawlResult.appendPlainText(res)
-        #         print(res)
     def default(self):
         self.crawlResult.clear()
 

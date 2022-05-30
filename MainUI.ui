@@ -85,13 +85,6 @@
       </widget>
      </item>
      <item>
-      <widget class="QCheckBox" name="checkBox_3">
-       <property name="text">
-        <string>XML</string>
-       </property>
-      </widget>
-     </item>
-     <item>
       <widget class="QPushButton" name="saveBtn">
        <property name="text">
         <string>저장</string>
@@ -119,7 +112,7 @@
       <x>30</x>
       <y>149</y>
       <width>371</width>
-      <height>161</height>
+      <height>296</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -138,34 +131,6 @@
      </item>
      <item>
       <widget class="QTextEdit" name="value1"/>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="verticalLayoutWidget_4">
-    <property name="geometry">
-     <rect>
-      <x>30</x>
-      <y>320</y>
-      <width>371</width>
-      <height>171</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_2">
-     <item>
-      <widget class="QLabel" name="label_5">
-       <property name="text">
-        <string>속성명(find)</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QTextEdit" name="tag2"/>
-     </item>
-     <item>
-      <widget class="QTextEdit" name="att2"/>
-     </item>
-     <item>
-      <widget class="QTextEdit" name="value2"/>
      </item>
     </layout>
    </widget>
