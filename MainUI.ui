@@ -42,7 +42,7 @@
       <x>410</x>
       <y>20</y>
       <width>371</width>
-      <height>511</height>
+      <height>421</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_9">
@@ -60,34 +60,6 @@
       <widget class="QPushButton" name="defaultBtn">
        <property name="text">
         <string>결과창 초기화</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_4">
-       <property name="text">
-        <string>저장 형태</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="checkBox">
-       <property name="text">
-        <string>CSV</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QCheckBox" name="checkBox_2">
-       <property name="text">
-        <string>JSON</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="saveBtn">
-       <property name="text">
-        <string>저장</string>
        </property>
       </widget>
      </item>
@@ -133,6 +105,42 @@
       <widget class="QTextEdit" name="value1"/>
      </item>
     </layout>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>450</y>
+      <width>64</width>
+      <height>15</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>저장 경로</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="pathBtn">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>470</y>
+      <width>369</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="saveBtn">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>502</y>
+      <width>369</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>저장</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
